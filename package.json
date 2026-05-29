@@ -11,6 +11,8 @@
     "verify": "sh scripts/verify.sh",
     "audit": "sh scripts/audit-project.sh",
     "migration:check": "sh scripts/migrate-checklist.sh",
+    "visual:audit": "sh scripts/visual-audit.sh",
+    "visual:check": "sh scripts/visual-migrate-checklist.sh",
     "kit:resolve": "sh scripts/resolve-kit.sh"
   },
   "dependencies": {

@@ -2,8 +2,8 @@ import type { ThemeConfig } from "antd";
 
 export const appTheme = {
   color: {
-    primary: "#e1251b",
-    primaryHover: "#c81623",
+    primary: "#1677ff",
+    primaryHover: "#0958d9",
     success: "#16a34a",
     warning: "#d97706",
     danger: "#dc2626",
@@ -48,7 +48,7 @@ export const antdTheme: ThemeConfig = {
       siderBg: appTheme.color.surface
     },
     Menu: {
-      itemSelectedBg: "#fff1f0",
+      itemSelectedBg: "#e6f4ff",
       itemSelectedColor: appTheme.color.primary
     },
     Card: {

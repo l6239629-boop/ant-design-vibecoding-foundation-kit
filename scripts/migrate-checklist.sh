@@ -94,7 +94,7 @@ else
   missing "ProComponents dependency"
 fi
 
-for file in AGENTS.md VIBECODING_PROFILE.md INSTALL.md MIGRATION.md docs/vibecoding-rules.md docs/official-links.md docs/migration-map.md docs/kit-discovery.md lib/theme.ts components/providers/app-providers.tsx scripts/verify.sh scripts/resolve-kit.sh; do
+for file in AGENTS.md VIBECODING_PROFILE.md INSTALL.md MIGRATION.md docs/vibecoding-rules.md docs/official-links.md docs/migration-map.md docs/kit-discovery.md docs/visual-standard.md docs/visual-migration-map.md lib/theme.ts components/providers/app-providers.tsx scripts/verify.sh scripts/resolve-kit.sh scripts/visual-audit.sh scripts/visual-migrate-checklist.sh; do
   if [ -f "$file" ]; then
     ok "$file"
   else
@@ -102,7 +102,7 @@ for file in AGENTS.md VIBECODING_PROFILE.md INSTALL.md MIGRATION.md docs/vibecod
   fi
 done
 
-for script in typecheck lint build verify kit:resolve; do
+for script in typecheck lint build verify kit:resolve visual:audit visual:check; do
   if script_exists "$script"; then
     ok "npm script: $script"
   else

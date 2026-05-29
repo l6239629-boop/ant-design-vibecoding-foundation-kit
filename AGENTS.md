@@ -23,6 +23,9 @@ This project is an Ant Design vibecoding foundation kit. Treat it as a reusable 
 - Use local `components/ui/*` only for shell-level primitives such as compact buttons and cards.
 - Use Tailwind for layout, spacing, and responsive composition.
 - Use `lib/theme.ts` and CSS variables for theme values. Do not scatter new hard-coded brand colors.
+- After conservative adoption, run visual audit and report whether the project still keeps its original visual style.
+- If dark theme, black backgrounds, custom brand-heavy CSS, or non-AntD shells are detected, ask whether to continue with AntD Light visual standardization.
+- Do not force visual replacement unless the user explicitly confirms.
 
 ## Avoid
 
@@ -44,8 +47,12 @@ For existing-project migrations, check:
 
 1. `MIGRATION.md`
 2. `docs/migration-map.md`
-3. `scripts/audit-project.sh`
-4. `scripts/migrate-checklist.sh`
+3. `docs/visual-standard.md`
+4. `docs/visual-migration-map.md`
+5. `scripts/audit-project.sh`
+6. `scripts/migrate-checklist.sh`
+7. `scripts/visual-audit.sh`
+8. `scripts/visual-migrate-checklist.sh`
 
 For short trigger installation and lookup, check:
 
@@ -57,6 +64,9 @@ Supported trigger phrases:
 - `接入 AntD 规范`
 - `审计 AntD 规范`
 - `新建 AntD 规范项目`
+- `统一 AntD 视觉`
+- `执行 AntD 视觉规范化`
+- `替换为 AntD 白色规范`
 
 ## Verification
 
@@ -79,6 +89,8 @@ For migration work:
 ```bash
 npm run audit
 npm run migration:check
+npm run visual:audit
+npm run visual:check
 ```
 
 For kit lookup:

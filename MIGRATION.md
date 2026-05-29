@@ -13,6 +13,7 @@ The migration goal is not to rewrite the app. Add the AI rules and runtime found
 - `ProForm` for business forms
 - `ProDescriptions` for detail pages
 - Theme tokens in `lib/theme.ts`
+- Optional AntD Light visual standardization after user confirmation
 - AI entry rules in `AGENTS.md`
 - Verification through `npm run verify`
 
@@ -155,6 +156,38 @@ sh scripts/migrate-checklist.sh
 
 The checklist is read-only. It reports whether the expected files, dependencies, scripts, and ProComponents usage are present.
 
+## Step 10: Prompt For Visual Standardization
+
+After conservative adoption, run:
+
+```bash
+npm run visual:audit
+```
+
+If the audit reports dark theme, black backgrounds, custom brand-heavy CSS, or non-AntD shells, do not replace visuals immediately. Ask:
+
+```text
+已完成保守接入。当前项目仍保留原视觉风格。
+检测到暗色/自定义视觉风险。
+是否继续统一为 AntD 白色视觉规范？
+```
+
+Only continue after the user confirms with a phrase such as:
+
+```text
+统一 AntD 视觉
+执行 AntD 视觉规范化
+替换为 AntD 白色规范
+```
+
+Use `docs/visual-standard.md` and `docs/visual-migration-map.md` for the replacement rules. Then run:
+
+```bash
+npm run visual:check
+npm run migration:check
+npm run verify
+```
+
 ## Done Criteria
 
 - `AGENTS.md` exists and references the Ant Design vibecoding standard.
@@ -166,3 +199,5 @@ The checklist is read-only. It reports whether the expected files, dependencies,
 - New or migrated list pages use `ProTable`.
 - New or migrated form pages use `ProForm`.
 - New or migrated detail pages use `ProDescriptions`.
+- Conservative adoption reports whether visual style remains unchanged.
+- Visual standardization is only performed after explicit user confirmation.

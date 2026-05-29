@@ -28,6 +28,8 @@ Open `http://localhost:3000`.
 - Vibecoding rules in `docs/vibecoding-rules.md`
 - Official reference links in `docs/official-links.md`
 - Kit discovery rules in `docs/kit-discovery.md`
+- AntD Light visual standardization rules in `docs/visual-standard.md`
+- Visual migration mapping in `docs/visual-migration-map.md`
 
 ## Trigger Phrases
 
@@ -37,6 +39,7 @@ Use these short triggers in Codex-like tools after the kit is installed:
 接入 AntD 规范
 审计 AntD 规范
 新建 AntD 规范项目
+统一 AntD 视觉
 ```
 
 The backend should resolve the zip through `ANTD_VIBECODING_KIT`, `.antdvibe/config.json`, or `~/.codex/kits`.
@@ -55,9 +58,17 @@ Use these when adopting the standard in an existing project:
 ```bash
 npm run audit
 npm run migration:check
+npm run visual:audit
 ```
 
 Read [MIGRATION.md](MIGRATION.md) and [docs/migration-map.md](docs/migration-map.md) before changing application code.
+
+After conservative adoption, run visual audit before changing the original visual style. If the user confirms `统一 AntD 视觉`, use [docs/visual-standard.md](docs/visual-standard.md) and [docs/visual-migration-map.md](docs/visual-migration-map.md), then run:
+
+```bash
+npm run visual:check
+npm run verify
+```
 
 ## Kit Discovery
 

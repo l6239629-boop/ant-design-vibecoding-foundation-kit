@@ -34,6 +34,16 @@ Generate consistent Ant Design business UI with minimal drift. The default outpu
 - Shared CSS variables live in `app/globals.css`.
 - Local primitives should use semantic CSS variables.
 - New brand or state colors must be added to `lib/theme.ts` first.
+- Conservative adoption does not force visual replacement.
+- AntD Light visual standardization starts only after explicit user confirmation.
+
+## Visual Standardization
+
+- Default visual target is AntD Light.
+- Run `npm run visual:audit` after conservative adoption.
+- If dark or custom visual styles remain, ask whether to continue with `统一 AntD 视觉`.
+- Use `docs/visual-standard.md` and `docs/visual-migration-map.md` for replacement decisions.
+- Finish visual standardization with `npm run visual:check`, `npm run migration:check`, and `npm run verify`.
 
 ## Install Expectations
 
@@ -65,6 +75,7 @@ See `INSTALL.md`.
 - Copy or merge the rule files before changing business pages.
 - Align dependencies to Ant Design 5 and ProComponents.
 - Add providers and theme tokens.
+- Run `npm run visual:audit` and prompt before replacing the original visual style.
 - Migrate pages gradually using `docs/migration-map.md`.
 - Finish with `npm run migration:check` and `npm run verify`.
 
@@ -73,6 +84,7 @@ See `INSTALL.md`.
 - `接入 AntD 规范`: resolve the kit, audit the current project, merge the standard, run checks, and report.
 - `审计 AntD 规范`: resolve the kit and audit only. Do not modify files.
 - `新建 AntD 规范项目`: resolve the kit, create a new project from it, install dependencies, and verify.
+- `统一 AntD 视觉`: after user confirmation, align the existing project to the default AntD Light visual standard.
 
 Resolve the kit with:
 
