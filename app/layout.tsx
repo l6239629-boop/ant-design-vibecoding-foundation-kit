@@ -6,8 +6,8 @@ import { AppProviders } from "@/components/providers/app-providers";
 import "./globals.css";
 
 export const metadata: Metadata = {
-  title: "京东 App 标签平台",
-  description: "基于 Ant Design 的商详标签 MVP 工作台。"
+  title: "AntD Vibecoding Foundation Kit",
+  description: "基于 Ant Design 的通用 vibecoding UI 基础规范。"
 };
 
 export default function RootLayout({ children }: Readonly<{ children: React.ReactNode }>) {

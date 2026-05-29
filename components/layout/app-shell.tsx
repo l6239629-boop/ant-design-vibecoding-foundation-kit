@@ -10,10 +10,10 @@ const { Text } = Typography;
 export type AppPageKey = "workspace" | "history" | "assets" | "knowledge";
 
 const navItems: MenuProps["items"] = [
-  { key: "workspace", icon: <Home className="size-4" />, label: "主入口" },
-  { key: "history", icon: <History className="size-4" />, label: "历史任务" },
-  { key: "assets", icon: <Tags className="size-4" />, label: "标签资产库" },
-  { key: "knowledge", icon: <Database className="size-4" />, label: "底层知识库" }
+  { key: "workspace", icon: <Home className="size-4" />, label: "工作台" },
+  { key: "history", icon: <History className="size-4" />, label: "生成记录" },
+  { key: "assets", icon: <Tags className="size-4" />, label: "组件资产" },
+  { key: "knowledge", icon: <Database className="size-4" />, label: "规范知识库" }
 ];
 
 export function AppShell({
@@ -42,8 +42,8 @@ export function AppShell({
         width={248}
       >
         <Space direction="vertical" size={4} style={{ padding: 20 }}>
-          <Text strong>京东标签平台</Text>
-          <Text type="secondary">商详 MVP 工作台</Text>
+          <Text strong>AntD Foundation</Text>
+          <Text type="secondary">Vibecoding Starter</Text>
         </Space>
         <Menu
           items={navItems}
@@ -70,7 +70,7 @@ export function AppShell({
         >
           <Input
             allowClear
-            placeholder="搜索标签、触点、历史任务或知识库规则"
+            placeholder="搜索组件、页面模板、生成记录或规范"
             prefix={<Search className="size-4" />}
             style={{ maxWidth: 460 }}
           />
