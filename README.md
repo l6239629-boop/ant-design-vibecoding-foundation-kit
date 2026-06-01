@@ -44,6 +44,70 @@ Use these short triggers in Codex-like tools after the kit is installed:
 
 The backend should resolve the zip through `ANTD_VIBECODING_KIT`, `.antdvibe/config.json`, or `~/.codex/kits`.
 
+If a tool does not recognize a short trigger, use this stronger prompt:
+
+```text
+请读取当前项目的 AGENTS.md 和 .antdvibe/triggers.json，并按「接入 AntD 规范」工作流执行。
+```
+
+## Prompt Workflows
+
+### 接入 AntD 规范
+
+Purpose:
+给已有项目接入 Ant Design vibecoding 基础规范。
+
+Effect:
+项目会获得 AI 规则、AntD/ProComponents 基础依赖、Provider/theme、组件 wrapper、审计与验证能力；原视觉默认保留，不会强制替换为 AntD 白色风格。
+
+User prompt:
+
+```text
+接入 AntD 规范
+```
+
+### 审计 AntD 规范
+
+Purpose:
+只检查当前项目是否符合 AntD vibecoding 规范。
+
+Effect:
+输出依赖、AI 规则、Provider/theme、组件模式、ProComponents 使用情况和视觉风险的问题清单；不修改任何文件。
+
+User prompt:
+
+```text
+审计 AntD 规范
+```
+
+### 新建 AntD 规范项目
+
+Purpose:
+从 0 创建一个默认符合 AntD vibecoding 规范的新项目。
+
+Effect:
+生成 Next.js + React + TypeScript + Tailwind CSS + AntD 5 + ProComponents 项目，并默认使用 AntD Light 白色视觉。
+
+User prompt:
+
+```text
+新建 AntD 规范项目
+```
+
+### 统一 AntD 视觉
+
+Purpose:
+在保守接入后，将项目视觉统一到 AntD Light 白色规范。
+
+Effect:
+识别并替换暗色/黑色/自定义强视觉样式，让页面结构和视觉逐步靠近 PageContainer、Card、ProTable、ProForm、ProDescriptions 与 AntD token。
+
+User prompt:
+
+```text
+统一 AntD 视觉
+```
+
 ## Example Pages
 
 - `http://localhost:3000/examples/list`

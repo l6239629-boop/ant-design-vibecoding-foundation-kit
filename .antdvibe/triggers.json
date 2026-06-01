@@ -1,0 +1,57 @@
+{
+  "version": 1,
+  "fallbackPrompt": "请读取当前项目的 AGENTS.md 和 .antdvibe/triggers.json，并按对应 AntD vibecoding 工作流执行。",
+  "triggers": [
+    {
+      "id": "adopt",
+      "canonical": "接入 AntD 规范",
+      "intent": "conservative_adoption",
+      "aliases": [
+        "安装 AntD 规范",
+        "套用 AntD 规范",
+        "应用 AntD 规范",
+        "接入 antd 规范",
+        "接入 antdesign 规范",
+        "把当前项目接入 AntD 规范"
+      ]
+    },
+    {
+      "id": "audit",
+      "canonical": "审计 AntD 规范",
+      "intent": "read_only_audit",
+      "aliases": [
+        "检查 AntD 规范",
+        "扫描 AntD 规范",
+        "看看是否符合 AntD 规范",
+        "审查 AntD 规范",
+        "只审计 AntD 规范"
+      ]
+    },
+    {
+      "id": "create",
+      "canonical": "新建 AntD 规范项目",
+      "intent": "create_standard_project",
+      "aliases": [
+        "创建 AntD 项目",
+        "新建 antd 项目",
+        "用 AntD 规范新建项目",
+        "创建 AntD 规范项目",
+        "从模板新建 AntD 项目"
+      ]
+    },
+    {
+      "id": "visual",
+      "canonical": "统一 AntD 视觉",
+      "intent": "antd_light_visual_standardization",
+      "aliases": [
+        "执行 AntD 视觉规范化",
+        "替换为 AntD 白色规范",
+        "替换为 AntD 白色风格",
+        "统一白色视觉",
+        "改成 AntD Light",
+        "去掉黑色风格",
+        "统一 antd 视觉"
+      ]
+    }
+  ]
+}

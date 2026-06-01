@@ -86,6 +86,12 @@ See `INSTALL.md`.
 - `新建 AntD 规范项目`: resolve the kit, create a new project from it, install dependencies, and verify.
 - `统一 AntD 视觉`: after user confirmation, align the existing project to the default AntD Light visual standard.
 
+Also recognize close aliases from `.antdvibe/triggers.json`. If a Codex-like tool does not react to a short trigger, use this stronger prompt:
+
+```text
+请读取当前项目的 AGENTS.md 和 .antdvibe/triggers.json，并按「接入 AntD 规范」工作流执行。
+```
+
 Resolve the kit with:
 
 ```bash

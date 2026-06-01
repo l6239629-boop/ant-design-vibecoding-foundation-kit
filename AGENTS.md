@@ -58,15 +58,25 @@ For short trigger installation and lookup, check:
 
 1. `docs/kit-discovery.md`
 2. `scripts/resolve-kit.sh`
+3. `.antdvibe/triggers.json`
 
-Supported trigger phrases:
+## Trigger Router
 
-- `接入 AntD 规范`
-- `审计 AntD 规范`
-- `新建 AntD 规范项目`
-- `统一 AntD 视觉`
-- `执行 AntD 视觉规范化`
-- `替换为 AntD 白色规范`
+When the user says one of these exact phrases or a close alias, treat it as a workflow trigger and run the matching intent.
+
+- `接入 AntD 规范`: conservative adoption. Resolve the kit, audit the target project, merge the AntD vibecoding foundation, keep the original visual style, run checks, and report whether visual standardization is available.
+- `审计 AntD 规范`: read-only audit. Inspect dependencies, rules, providers, component patterns, and visual risks without modifying files.
+- `新建 AntD 规范项目`: create a standard project. Ask for the target name or directory, copy the starter, install dependencies, verify, and open the default workbench.
+- `统一 AntD 视觉`: AntD Light visual standardization. Confirm scope when the impact is broad, then align dark/custom visuals to the AntD Light standard.
+
+Recognize common aliases:
+
+- `接入 AntD 规范`: `安装 AntD 规范`, `套用 AntD 规范`, `应用 AntD 规范`, `接入 antd 规范`, `接入 antdesign 规范`
+- `审计 AntD 规范`: `检查 AntD 规范`, `扫描 AntD 规范`, `看看是否符合 AntD 规范`, `审查 AntD 规范`
+- `新建 AntD 规范项目`: `创建 AntD 项目`, `新建 antd 项目`, `用 AntD 规范新建项目`, `创建 AntD 规范项目`
+- `统一 AntD 视觉`: `执行 AntD 视觉规范化`, `替换为 AntD 白色规范`, `替换为 AntD 白色风格`, `统一白色视觉`, `改成 AntD Light`, `去掉黑色风格`
+
+If a tool does not recognize the short trigger, ask it to read `AGENTS.md` and `.antdvibe/triggers.json`, then execute the matching workflow.
 
 ## Verification
 
